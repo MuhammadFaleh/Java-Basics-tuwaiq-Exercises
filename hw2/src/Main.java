@@ -2,13 +2,10 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
-    static Scanner infoTaker;
-
-    public static void biggestNumChecker() {
-        System.out.println("input a number");
-    }
+    static Scanner infoTaker = new Scanner(System.in);
 
     static void main() {
+        // first task
         System.out.println("user types \n1-admin \n2-superuser\n3-user");
         System.out.print("enter the usertype:");
         String userType = infoTaker.nextLine();
@@ -21,7 +18,9 @@ public class Main {
         } else {
             System.out.println("enter one from the list");
         }
+        //////////////////////
 
+        //second task
         System.out.print("enter the first number:");
         int firstNum = infoTaker.nextInt();
         System.out.print("enter the second number:");
@@ -37,7 +36,9 @@ public class Main {
         } else {
             System.out.println("no single biggest number");
         }
+        /////////////////////
 
+        //third task
         Random numGenerator = new Random();
         int dayOfWeek = numGenerator.nextInt(1, 8);
         switch (dayOfWeek) {
@@ -49,7 +50,9 @@ public class Main {
             case 6 -> System.out.println("today is friday");
             case 7 -> System.out.println("today is saturday");
         }
+        //////////////////
 
+        //fourth task
         System.out.print("please enter your grade: ");
         int grade = infoTaker.nextInt();
         if (grade >= 90 && grade <= 100) {
@@ -63,7 +66,9 @@ public class Main {
         } else {
             System.out.println("your grade is F");
         }
+        /////////////////
 
+        //fifth task
         System.out.print("please enter your age: ");
         byte age = infoTaker.nextByte();
         if (age >= 13 && age <= 19) {
@@ -74,9 +79,10 @@ public class Main {
             System.out.println("Age group: child");
         }
 
+
+
     }
 
-    static {
-        infoTaker = new Scanner(System.in);
-    }
+
 }
+
