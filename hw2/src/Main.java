@@ -42,13 +42,27 @@ public class Main {
         Random numGenerator = new Random();
         int dayOfWeek = numGenerator.nextInt(1, 8);
         switch (dayOfWeek) {
-            case 1 -> System.out.println("today is sunday");
-            case 2 -> System.out.println("today is monday");
-            case 3 -> System.out.println("today is tuesday");
-            case 4 -> System.out.println("today is wednesday");
-            case 5 -> System.out.println("today is thursday");
-            case 6 -> System.out.println("today is friday");
-            case 7 -> System.out.println("today is saturday");
+            case 1:
+                System.out.println("today is sunday");
+                break;
+            case 2:
+                System.out.println("today is monday");
+                break;
+            case 3:
+                System.out.println("today is tuesday");
+                break;
+            case 4:
+                System.out.println("today is wednesday");
+                break;
+            case 5:
+                System.out.println("today is thursday");
+                break;
+            case 6:
+                System.out.println("today is friday");
+                break;
+            case 7:
+                System.out.println("today is saturday");
+                break;
         }
         //////////////////
 
@@ -85,4 +99,3 @@ public class Main {
 
 
 }
-
