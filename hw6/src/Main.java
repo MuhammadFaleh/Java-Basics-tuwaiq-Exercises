@@ -37,7 +37,7 @@ public class Main {
     static String checkPassword(String password){
         String letters = "abcdefghijklmnopqrstuvwxyz01234567890";
         int digitCounter = 0;
-        if(password.length() <10){
+        if(password.length() <8){
             return "password not valid: (shorter than 10 elements) " +password;
         }
         for (int i = 0; i<password.length(); i++) {
@@ -67,6 +67,5 @@ public class Main {
         String password = infoTaker.nextLine();
         System.out.println(checkPassword(password));
     }
-    }
-
+}
 
