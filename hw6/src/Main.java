@@ -36,7 +36,8 @@ public class Main {
 
     static String checkPassword(String password){
         String letters = "abcdefghijklmnopqrstuvwxyz01234567890";
-
+        System.out.println(letters.length() +" " + letters.substring(26));
+        int digitCounter = 0;
         if(password.length() <10){
             return "password not valid: (shorter than 10 elements) " +password;
         }
@@ -45,8 +46,14 @@ public class Main {
                 return "password not valid: " + password + " (banned char) " + password.charAt(i);
             }
 
-        }
+            if(letters.substring(26).contains(password.toLowerCase().charAt(i)+"")){
+                digitCounter++;
+            }
 
+        }
+        if(digitCounter <2){
+            return "password not valid: " + password + " (contains less than two digits) ";
+        }
         return  "password is valid: " + password;
     }
 
