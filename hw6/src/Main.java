@@ -38,7 +38,7 @@ public class Main {
         String letters = "abcdefghijklmnopqrstuvwxyz01234567890";
         int digitCounter = 0;
         if(password.length() <8){
-            return "password not valid: (shorter than 10 elements) " +password;
+            return "password not valid: (shorter than 8 elements) " +password;
         }
         for (int i = 0; i<password.length(); i++) {
             if(!letters.contains(password.toLowerCase().charAt(i)+"")){
@@ -68,4 +68,3 @@ public class Main {
         System.out.println(checkPassword(password));
     }
 }
-
