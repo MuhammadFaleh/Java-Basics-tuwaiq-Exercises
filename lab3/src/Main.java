@@ -74,9 +74,13 @@ public class Main {
 
         //checkout
         System.out.println("\n------------checkout------------");
+        System.out.println("\nuser1:");
+        printLists(user1.getShoppingCart());
         user1.checkOut();
 
-        System.out.println("\n");
+
+        System.out.println("\nuser2:");
+        printLists(user2.getShoppingCart());
         user2.checkOut();
 
         // music playlist
