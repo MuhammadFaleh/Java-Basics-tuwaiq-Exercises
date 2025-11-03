@@ -15,16 +15,20 @@ public class NonSubscribers extends  Passenger{
     }
     @Override
     double reservedCarCost(Car car) {
+        int added = 0;
         if(car == null) {
             return 0;
         }
         try {
+            if(car.getType().equalsIgnoreCase("big car")){
+                added = 15; // if car is big
+            }
             if(car.hasCapacity()){
 
                 car.reduceCapacity();
                 if(discountCoupon) {
-                    super.setTripCost((car.getCost() - car.getCost() * .10));
-                }else super.setTripCost(car.getCost());
+                    super.setTripCost((car.getCost() + added - car.getCost() + added * .10));
+                }else super.setTripCost(car.getCost() + added);
             } else {
                 throw  new Exception("Sorry no seats left, please book another trip");
             }

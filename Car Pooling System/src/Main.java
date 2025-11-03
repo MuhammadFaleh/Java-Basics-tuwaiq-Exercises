@@ -10,8 +10,8 @@ public class Main {
         Route route1 = new Route("Riyadh", "Jeddah", 500);
         Route route2 = new Route("Riyadh", "Al-Qassim", 300);
 
-        Car car1 = new Car("Car1", route1, 4);
-        Car car2 = new Car("Car2", route2, 0);
+        Car car1 = new Car("Car1", route1, 4, "Small Car");
+        Car car2 = new Car("Car2", route2, 0, "Small Car");
 
         Subscribers sub1 = new Subscribers("ahmed","123", car1);
 

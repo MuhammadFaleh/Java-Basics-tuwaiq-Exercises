@@ -13,6 +13,9 @@ public class Subscribers extends Passenger{
             return 0;
         }
         try {
+            if(car.getType().equalsIgnoreCase("big car")){
+                added = 15; // if car is big
+            }
             if(car.hasCapacity()){
                 car.reduceCapacity();
                 super.setTripCost((car.getCost() * discount) + added);

@@ -3,12 +3,14 @@ public class Car {
     private Route route;
     private int maxCapacity;
     private int availableSeats;
+    private String type;
 
-    public Car(String code, Route route, int maxCapacity) {
+    public Car(String code, Route route, int maxCapacity, String type) {
         setCode(code);
         setRoute(route);
         setMaxCapacity(maxCapacity);
         setAvailableSeats(maxCapacity);
+        setType(type);
 
     }
 
@@ -26,6 +28,10 @@ public class Car {
 
     public void setAvailableSeats(int availableSeats) {
         this.availableSeats = availableSeats;
+    }
+
+    public void setType(String type){
+        this.type = type;
     }
 
     public String getCode() {
@@ -49,6 +55,10 @@ public class Car {
         return route.getTripCost();
     }
 
+    public String getType() {
+        return type;
+    }
+
     public void reduceCapacity(){
         this.availableSeats--;
     }
@@ -58,8 +68,8 @@ public class Car {
     }
 
     public String displayInfo(){
-        return String.format("%s \t Seats Left: %d",
-                route.displayInfo(), availableSeats);
+        return String.format("%s \t Type: %s \t Seats Left: %d",
+                route.displayInfo(), type,availableSeats);
     }
 
 }
